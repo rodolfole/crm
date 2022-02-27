@@ -1,0 +1,25 @@
+query Users {
+  users {
+    id
+    email
+  }
+}
+
+mutation ExistUser($email: String!) {
+  existUser(email: $email)
+}
+
+mutation Login($input: LoginInput!) {
+  login(input: $input) {
+    jwt
+  }
+}
+
+mutation Register($input: UserInput!) {
+  register(input: $input) {
+    id
+    email
+    firstName
+    lastName
+  }
+}

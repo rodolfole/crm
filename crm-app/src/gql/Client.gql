@@ -1,0 +1,46 @@
+query Client($id: Int!) {
+  client(id: $id) {
+    id
+    email
+  }
+}
+
+query ClientsSeller {
+  clientsSeller {
+    id
+    createdAt
+    email
+    firstName
+    lastName
+    phone
+    sellerId
+  }
+}
+
+mutation CreateClient($input: ClientInput!) {
+  createClient(input: $input) {
+    id
+    createdAt
+    email
+    firstName
+    lastName
+    phone
+    sellerId
+  }
+}
+
+mutation DeleteClient($id: Int!) {
+  deleteClient(id: $id)
+}
+
+mutation UpdateClient($id: Int!, $input: ClientInput!) {
+  updateClient(id: $id, input: $input) {
+    id
+    createdAt
+    email
+    firstName
+    lastName
+    phone
+    sellerId
+  }
+}
