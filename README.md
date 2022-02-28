@@ -12,7 +12,7 @@
 3. Change in ormconfig.json your Database credentials
 
 4. RUN
-### `yarn migration:generate`
+### `yarn migration:generate name_of_the_migration`
 ### `yarn migration:run`
 
 5. RUN
